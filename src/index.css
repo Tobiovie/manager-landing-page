@@ -11,3 +11,401 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.label{
+  display: flex;
+  gap: 1em;
+}
+input + div{
+  border: hsl(12, 88%, 59%) 1px solid;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+input + div::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color:hsl(12, 88%, 59%);
+  border-radius: 50%;
+  transform: scale(0);
+}
+input:checked +div::after{
+  transform: scale(1);
+}
+input{
+  display: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav .disnone{
+  display: none;
+  
+ }
+ nav .disflex{
+   display: flex;
+ }
+ .started{
+  display: none;
+ }
+ nav .nav-icon{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  /* background-color:white;
+  border: rgba(128, 128, 128, 0.178) 1px solid; */
+}
+nav .nav-box{
+ 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  background-color: hsl(0, 0%, 98%);
+  z-index: 2;
+  inset: 9% 4% 50% 4%;
+  
+}
+.nav-box p{
+  margin-bottom: 1em;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 1s;
+}
+.nav-box p:hover{
+  border-bottom: yellow solid 1px;
+}
+.grid{
+  display: grid;
+  grid-template-areas: 'gridone'
+                       'gridtwo'
+                       'gridthree'
+                       'gridfour'
+                       'gridfive'
+                       'gridsix'
+                       'gridseven';
+  padding-top: 4em;
+}
+body{
+  background-image: url(./images/bg-tablet-pattern.svg);
+  background-position: top -4em right -9em;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.grid-one{
+  grid-area: gridone;
+}
+.grid-one img{
+  width: 100%;
+}
+.grid-two{
+  grid-area: gridtwo;
+  display: flex;
+  background-image: url(./images/bg-tablet-pattern.svg);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1em 1em 3em 1em;
+  text-align: center;
+  align-items: center;
+}
+.grid-two p:first-child{
+  font-size: 2rem;
+  font-weight: 700;
+}
+.button{
+  background-color: hsl(12, 88%, 59%);
+  padding: .5em 2em;
+  border-radius: 25px;
+}
+.grid-three{
+  grid-area: gridthree;
+  display: flex;
+  gap: 2em;
+  padding: 1em 1em 4em 1em;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: grey;
+}
+.grid-three p:first-child{
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: hsl(233, 12%, 13%);
+}
+.grid-four{
+  grid-area: gridfour;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 0 0 4em 1em;
+}
+.grid-four .text-area{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.grid-four .oneline{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0 2em 0 0;
+  background-color: hsl(13, 100%, 96%);
+  color: hsl(233, 12%, 13%);
+  border-radius: 20px;
+}
+.grid-four .oneline p:first-child{
+  padding: .5em 1.3em;
+  background-color: hsl(12, 88%, 59%);
+  border-radius: 15px;
+  color: white;
+}
+.grid-four .text-area > p:nth-child(2){
+  padding-right: 1em;
+  color: grey;
+}
+.grid-five{
+  grid-area: gridfive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 3em;
+  padding: 4em 1em 2em 1em;
+  color: hsl(228, 39%, 23%);
+}
+.grid-five > div:first-child{
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2em;
+}
+.grid-five .card-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4em;
+}
+.grid-five .wrap{
+  display: flex;
+  gap: 4em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 98%);
+    padding: 0em 2em 2em 2em;
+    color: grey;
+}
+.card .name{
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  font-weight: 700;
+  color: hsl(228, 39%, 23%);
+}
+.card img{
+  width: 30%;
+  position: relative;
+  bottom: 3em;
+}
+.card .post{
+  text-align: initial;
+}
+.grid-six{
+  grid-area: gridsix;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  align-items: center;
+  padding: 4em 1.5em 3em 1.5em;
+  background-color: hsl(12, 88%, 59%);
+  text-align: center;
+}
+.grid-six p:first-child{
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: white;
+}
+.get{
+  color: hsl(12, 88%, 59%);
+  background-color: white;
+}
+.grid-seven{
+  grid-area: gridseven;
+  display: grid;
+  gap: 3em;
+  background-color: hsl(228, 39%, 23%);
+  padding: 3em 1em 2.5em 1em;
+  grid-template-areas: 'gri1'
+                       'gri2'
+                       'gri3'
+                       'gri4';
+}
+.gri1{
+  grid-area: gri1;
+}
+.gri1 .go-box{
+  display: flex;
+  gap: .5em;
+  justify-content: center;
+}
+.go-box p:first-child{
+  padding: .7em 3.5em .7em 1em;
+  border: white solid 1px;
+  background-color: white;
+  border-radius: 30px;
+  color: grey;
+}
+.go-box p:nth-child(2){
+  padding: .7em 1.6em .7em 1.6em;
+  color: white;
+  background-color: hsl(12, 88%, 59%);
+  border-radius: 20px;
+}
+.gri2{
+  grid-area: gri2;
+  display: flex;
+  justify-content: space-around;
+}
+.gri2 div p{
+  margin-bottom: 1em;
+  color: white;
+}
+.gri3{
+  grid-area: gri3;
+  display: flex;
+  align-items: center;
+  gap: 4em;
+  flex-direction: column;
+}
+.gri3 div:first-child{
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+.gri3 .img{
+  background-color: white;
+}
+.gri4{
+  grid-area: gri4;
+  display: flex;
+  justify-content: center;
+  color: grey;
+}
+@media(min-width:700px){
+  .grid-five{
+    padding: 4em 0 2em 0;
+  }
+  body{
+    background-image: url(./images/bg-tablet-pattern.svg);
+    background-position: top -4em right -9em;
+    background-size: 40%;
+    background-repeat: no-repeat;
+  }
+}
+@media(min-width:774px){
+  nav .nav-box{
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color:initial;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-box p{
+    margin-right: 1em;
+  }
+  nav .nav-icon{
+    display: block;
+    padding: 0;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+  }
+  nav .hamburger{
+    display:  none;
+  }
+  .started{
+    display: block;
+  }
+  .grid{
+    grid-template-areas: 'gridtwo gridone'
+                         'gridthree gridfour'
+                         'gridfive gridfive'
+                         'gridsix gridsix'
+                         'gridseven gridseven';
+  }
+  .grid-two{
+    align-items: flex-start;
+    text-align: left;
+    max-width: 500px;
+    background-image: none;
+  }
+  .grid-six{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .grid-six p:first-child{
+    max-width: 500px;
+    text-align: left;
+  }
+  .grid-three{
+    max-width: 470px;
+    text-align: initial;
+    background-image: url(./images/bg-tablet-pattern.svg);
+    background-position: -2em 6em ;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+  .grid-four{
+    max-width: 570px;
+    padding: 0;
+    justify-self: end;
+  }
+  .grid-four .oneline{
+    background-color: hsl(0, 0%, 98%);
+  }
+  .grid-four .text-area > p:nth-child(2){
+    padding: 0 0 0 4em;
+  }
+}
+@media(min-width:940px){
+  .grid-seven{
+    grid-template-areas: 'gri3 gri2 gri1'
+                         'w w gri4';
+  }
+  .gri4{
+    position: relative;
+    bottom: 4em;
+  }
+  
+  .grid-two{
+    padding-left: 9.5em;
+  }
+  .grid-three{
+    padding-left: 9.5em;
+  }
+  .grid-one{
+    padding-right: 9.5em;
+  }
+  .grid-four{
+    padding-right: 9.5em;
+  }
+}
